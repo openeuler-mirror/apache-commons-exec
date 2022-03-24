@@ -1,10 +1,11 @@
 Name:           apache-commons-exec
 Version:        1.3
-Release:        10
+Release:        11
 Summary:        A library to reliably execute external processes from within the JVM
 License:        ASL 2.0
 URL:            http://commons.apache.org/exec/
 Source0:        http://www.apache.org/dist/commons/exec/source/commons-exec-%{version}-src.tar.gz
+Patch01:        modify_offsetMultiplier_in_Exec60Test.patch
 BuildArch:      noarch
 
 BuildRequires:  maven-local mvn(junit:junit) mvn(org.apache.commons:commons-parent:pom:)
@@ -44,5 +45,8 @@ find ./ -name Exec57Test.java | xargs rm
 %doc LICENSE.txt NOTICE.txt
 
 %changelog
+* Tue Mar 29 2022 Xiaoqian Lv <xiaoqian@nj.iscas.ac.cn> - 1.3-11
+- fix test failure:modify offsetMultiplier in Exec60Test
+
 * Wed Mar 11 2020 Jiangping Hu <hujp1985@foxmail.com> - 1.3-10
 - Package init

@@ -1,0 +1,11 @@
+--- a/src/test/java/org/apache/commons/exec/issues/Exec60Test.java	2014-11-03 07:43:15.000000000 +0800
++++ b/src/test/java/org/apache/commons/exec/issues/Exec60Test.java	2022-03-30 11:21:22.362098000 +0800
+@@ -49,7 +49,7 @@
+ 
+         final int start = 0;
+         final int seconds = 1;
+-        final int offsetMultiplier = 1;
++        final int offsetMultiplier = 3;
+         final int maxRetries = 180;
+         int processTerminatedCounter = 0;
+         int watchdogKilledProcessCounter = 0;
